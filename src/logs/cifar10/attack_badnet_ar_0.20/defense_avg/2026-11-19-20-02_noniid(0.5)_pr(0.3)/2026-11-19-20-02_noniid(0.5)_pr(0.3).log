@@ -1,0 +1,947 @@
+2026-11-19 20:02:49,412 [MainThread  ] [INFO ]  Namespace(data='cifar10', num_agents=20, agent_frac=1.0, num_corrupt=4, rounds=150, local_ep=2, bs=64, client_lr=0.1, server_lr=1, target_class=7, poison_frac=0.3, pattern_type='plus', theta=8, theta_ld=10, snap=1, device='mps', num_workers=0, dense_ratio=0.25, anneal_factor=0.0001, se_threshold=0.0001, non_iid=True, debug=False, beta=0.5, attack='badnet', aggr='avg', lr_decay=0.99, momentum=0.0, mask_init='ERK', wd=0.0001, same_mask=1, cease_poison=100000, exp_name_extra='', super_power=False, clean=False, sparsity=0.3, lambda_s=1.0, lambda_c=1.0, seed=0, num_target=10, exp_name='noniid(0.5)_pr(0.3)')
+2026-11-19 20:02:50,689 [MainThread  ] [INFO ]  (50000, 10)
+2026-11-19 20:02:50,797 [MainThread  ] [INFO ]  client:0, distribution: [530, 489, 27, 69, 104, 75, 217, 22, 1204, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:1, distribution: [9, 54, 19, 13, 126, 1202, 302, 1, 417, 688]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:2, distribution: [5, 1, 235, 55, 0, 573, 811, 1132, 0, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:3, distribution: [220, 166, 68, 34, 19, 824, 35, 602, 0, 235]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:4, distribution: [281, 132, 55, 45, 146, 178, 48, 230, 440, 2209]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:5, distribution: [702, 349, 345, 255, 541, 27, 739, 0, 0, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:6, distribution: [6, 125, 1096, 10, 47, 24, 10, 148, 20, 68]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:7, distribution: [401, 9, 51, 382, 376, 254, 115, 2, 739, 478]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:8, distribution: [628, 391, 19, 14, 970, 35, 443, 0, 0, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:9, distribution: [1, 82, 38, 28, 1040, 220, 997, 31, 93, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:10, distribution: [647, 839, 259, 278, 36, 275, 20, 192, 0, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:11, distribution: [287, 822, 807, 41, 24, 182, 88, 27, 85, 30]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:12, distribution: [257, 337, 209, 0, 167, 0, 40, 1704, 0, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:13, distribution: [274, 30, 43, 1144, 642, 169, 198, 0, 0, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:14, distribution: [501, 50, 165, 204, 0, 7, 0, 168, 186, 802]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:15, distribution: [151, 224, 203, 1090, 85, 8, 150, 14, 684, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:16, distribution: [30, 353, 320, 281, 160, 48, 71, 12, 217, 74]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:17, distribution: [2, 453, 696, 277, 17, 887, 692, 0, 0, 0]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:18, distribution: [33, 93, 179, 365, 444, 0, 21, 672, 201, 15]
+2026-11-19 20:02:50,798 [MainThread  ] [INFO ]  client:19, distribution: [35, 1, 166, 415, 56, 12, 3, 43, 714, 401]
+2026-11-19 20:02:51,259 [MainThread  ] [INFO ]  build client:0 mal:1 data_num:2737
+2026-11-19 20:02:51,292 [MainThread  ] [INFO ]  build client:1 mal:1 data_num:2831
+2026-11-19 20:02:51,318 [MainThread  ] [INFO ]  build client:2 mal:1 data_num:2812
+2026-11-19 20:02:51,343 [MainThread  ] [INFO ]  build client:3 mal:1 data_num:2203
+2026-11-19 20:02:51,346 [MainThread  ] [INFO ]  build client:4 mal:0 data_num:3764
+2026-11-19 20:02:51,348 [MainThread  ] [INFO ]  build client:5 mal:0 data_num:2958
+2026-11-19 20:02:51,349 [MainThread  ] [INFO ]  build client:6 mal:0 data_num:1554
+2026-11-19 20:02:51,351 [MainThread  ] [INFO ]  build client:7 mal:0 data_num:2807
+2026-11-19 20:02:51,353 [MainThread  ] [INFO ]  build client:8 mal:0 data_num:2500
+2026-11-19 20:02:51,355 [MainThread  ] [INFO ]  build client:9 mal:0 data_num:2530
+2026-11-19 20:02:51,357 [MainThread  ] [INFO ]  build client:10 mal:0 data_num:2546
+2026-11-19 20:02:51,359 [MainThread  ] [INFO ]  build client:11 mal:0 data_num:2393
+2026-11-19 20:02:51,361 [MainThread  ] [INFO ]  build client:12 mal:0 data_num:2714
+2026-11-19 20:02:51,363 [MainThread  ] [INFO ]  build client:13 mal:0 data_num:2500
+2026-11-19 20:02:51,365 [MainThread  ] [INFO ]  build client:14 mal:0 data_num:2083
+2026-11-19 20:02:51,367 [MainThread  ] [INFO ]  build client:15 mal:0 data_num:2609
+2026-11-19 20:02:51,368 [MainThread  ] [INFO ]  build client:16 mal:0 data_num:1566
+2026-11-19 20:02:51,370 [MainThread  ] [INFO ]  build client:17 mal:0 data_num:3024
+2026-11-19 20:02:51,372 [MainThread  ] [INFO ]  build client:18 mal:0 data_num:2023
+2026-11-19 20:02:51,373 [MainThread  ] [INFO ]  build client:19 mal:0 data_num:1846
+2026-11-19 20:02:51,373 [MainThread  ] [INFO ]  --------round 1 ------------
+2026-11-19 20:04:26,495 [MainThread  ] [INFO ]  ---------Test 1 ------------
+2026-11-19 20:04:35,796 [MainThread  ] [INFO ]  Clean ACC:              0.1018
+2026-11-19 20:04:35,796 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2260
+2026-11-19 20:04:35,796 [MainThread  ] [INFO ]  Backdoor ACC:           0.0858
+2026-11-19 20:04:35,796 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:04:35,796 [MainThread  ] [INFO ]  --------round 2 ------------
+2026-11-19 20:06:10,679 [MainThread  ] [INFO ]  ---------Test 2 ------------
+2026-11-19 20:06:19,800 [MainThread  ] [INFO ]  Clean ACC:              0.1444
+2026-11-19 20:06:19,800 [MainThread  ] [INFO ]  Attack Success Ratio:   0.0000
+2026-11-19 20:06:19,800 [MainThread  ] [INFO ]  Backdoor ACC:           0.1601
+2026-11-19 20:06:19,800 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:06:19,800 [MainThread  ] [INFO ]  --------round 3 ------------
+2026-11-19 20:07:57,062 [MainThread  ] [INFO ]  ---------Test 3 ------------
+2026-11-19 20:08:06,434 [MainThread  ] [INFO ]  Clean ACC:              0.2033
+2026-11-19 20:08:06,434 [MainThread  ] [INFO ]  Attack Success Ratio:   0.0000
+2026-11-19 20:08:06,434 [MainThread  ] [INFO ]  Backdoor ACC:           0.2253
+2026-11-19 20:08:06,434 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:08:06,434 [MainThread  ] [INFO ]  --------round 4 ------------
+2026-11-19 20:09:43,920 [MainThread  ] [INFO ]  ---------Test 4 ------------
+2026-11-19 20:09:53,269 [MainThread  ] [INFO ]  Clean ACC:              0.2338
+2026-11-19 20:09:53,270 [MainThread  ] [INFO ]  Attack Success Ratio:   0.0000
+2026-11-19 20:09:53,270 [MainThread  ] [INFO ]  Backdoor ACC:           0.2594
+2026-11-19 20:09:53,270 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:09:53,270 [MainThread  ] [INFO ]  --------round 5 ------------
+2026-11-19 20:11:28,776 [MainThread  ] [INFO ]  ---------Test 5 ------------
+2026-11-19 20:11:37,910 [MainThread  ] [INFO ]  Clean ACC:              0.2706
+2026-11-19 20:11:37,910 [MainThread  ] [INFO ]  Attack Success Ratio:   0.0036
+2026-11-19 20:11:37,910 [MainThread  ] [INFO ]  Backdoor ACC:           0.2889
+2026-11-19 20:11:37,910 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:11:37,910 [MainThread  ] [INFO ]  --------round 6 ------------
+2026-11-19 20:13:14,853 [MainThread  ] [INFO ]  ---------Test 6 ------------
+2026-11-19 20:13:24,359 [MainThread  ] [INFO ]  Clean ACC:              0.3250
+2026-11-19 20:13:24,360 [MainThread  ] [INFO ]  Attack Success Ratio:   0.1464
+2026-11-19 20:13:24,360 [MainThread  ] [INFO ]  Backdoor ACC:           0.2886
+2026-11-19 20:13:24,360 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:13:24,360 [MainThread  ] [INFO ]  --------round 7 ------------
+2026-11-19 20:15:02,183 [MainThread  ] [INFO ]  ---------Test 7 ------------
+2026-11-19 20:15:11,480 [MainThread  ] [INFO ]  Clean ACC:              0.3484
+2026-11-19 20:15:11,481 [MainThread  ] [INFO ]  Attack Success Ratio:   0.1913
+2026-11-19 20:15:11,481 [MainThread  ] [INFO ]  Backdoor ACC:           0.2910
+2026-11-19 20:15:11,481 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:15:11,481 [MainThread  ] [INFO ]  --------round 8 ------------
+2026-11-19 20:16:49,168 [MainThread  ] [INFO ]  ---------Test 8 ------------
+2026-11-19 20:16:58,317 [MainThread  ] [INFO ]  Clean ACC:              0.3781
+2026-11-19 20:16:58,317 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2399
+2026-11-19 20:16:58,317 [MainThread  ] [INFO ]  Backdoor ACC:           0.2920
+2026-11-19 20:16:58,317 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:16:58,317 [MainThread  ] [INFO ]  --------round 9 ------------
+2026-11-19 20:18:35,355 [MainThread  ] [INFO ]  ---------Test 9 ------------
+2026-11-19 20:18:44,494 [MainThread  ] [INFO ]  Clean ACC:              0.3976
+2026-11-19 20:18:44,495 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2991
+2026-11-19 20:18:44,495 [MainThread  ] [INFO ]  Backdoor ACC:           0.2750
+2026-11-19 20:18:44,495 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:18:44,495 [MainThread  ] [INFO ]  --------round 10 ------------
+2026-11-19 20:20:22,126 [MainThread  ] [INFO ]  ---------Test 10 ------------
+2026-11-19 20:20:31,284 [MainThread  ] [INFO ]  Clean ACC:              0.4136
+2026-11-19 20:20:31,284 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4251
+2026-11-19 20:20:31,284 [MainThread  ] [INFO ]  Backdoor ACC:           0.2404
+2026-11-19 20:20:31,284 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:20:31,284 [MainThread  ] [INFO ]  --------round 11 ------------
+2026-11-19 20:22:08,803 [MainThread  ] [INFO ]  ---------Test 11 ------------
+2026-11-19 20:22:17,981 [MainThread  ] [INFO ]  Clean ACC:              0.4411
+2026-11-19 20:22:17,981 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3599
+2026-11-19 20:22:17,981 [MainThread  ] [INFO ]  Backdoor ACC:           0.2721
+2026-11-19 20:22:17,981 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:22:17,981 [MainThread  ] [INFO ]  --------round 12 ------------
+2026-11-19 20:23:55,017 [MainThread  ] [INFO ]  ---------Test 12 ------------
+2026-11-19 20:24:04,148 [MainThread  ] [INFO ]  Clean ACC:              0.4526
+2026-11-19 20:24:04,148 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4314
+2026-11-19 20:24:04,148 [MainThread  ] [INFO ]  Backdoor ACC:           0.2606
+2026-11-19 20:24:04,148 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:24:04,148 [MainThread  ] [INFO ]  --------round 13 ------------
+2026-11-19 20:25:40,712 [MainThread  ] [INFO ]  ---------Test 13 ------------
+2026-11-19 20:25:49,812 [MainThread  ] [INFO ]  Clean ACC:              0.4737
+2026-11-19 20:25:49,813 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3957
+2026-11-19 20:25:49,813 [MainThread  ] [INFO ]  Backdoor ACC:           0.2686
+2026-11-19 20:25:49,813 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:25:49,813 [MainThread  ] [INFO ]  --------round 14 ------------
+2026-11-19 20:27:27,924 [MainThread  ] [INFO ]  ---------Test 14 ------------
+2026-11-19 20:27:37,234 [MainThread  ] [INFO ]  Clean ACC:              0.4770
+2026-11-19 20:27:37,234 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4222
+2026-11-19 20:27:37,234 [MainThread  ] [INFO ]  Backdoor ACC:           0.2572
+2026-11-19 20:27:37,234 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:27:37,234 [MainThread  ] [INFO ]  --------round 15 ------------
+2026-11-19 20:29:15,014 [MainThread  ] [INFO ]  ---------Test 15 ------------
+2026-11-19 20:29:24,185 [MainThread  ] [INFO ]  Clean ACC:              0.5002
+2026-11-19 20:29:24,186 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2734
+2026-11-19 20:29:24,186 [MainThread  ] [INFO ]  Backdoor ACC:           0.3308
+2026-11-19 20:29:24,186 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:29:24,186 [MainThread  ] [INFO ]  --------round 16 ------------
+2026-11-19 20:31:02,483 [MainThread  ] [INFO ]  ---------Test 16 ------------
+2026-11-19 20:31:11,767 [MainThread  ] [INFO ]  Clean ACC:              0.5140
+2026-11-19 20:31:11,767 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3869
+2026-11-19 20:31:11,767 [MainThread  ] [INFO ]  Backdoor ACC:           0.2994
+2026-11-19 20:31:11,767 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:31:11,767 [MainThread  ] [INFO ]  --------round 17 ------------
+2026-11-19 20:32:47,577 [MainThread  ] [INFO ]  ---------Test 17 ------------
+2026-11-19 20:32:56,843 [MainThread  ] [INFO ]  Clean ACC:              0.5324
+2026-11-19 20:32:56,844 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3268
+2026-11-19 20:32:56,844 [MainThread  ] [INFO ]  Backdoor ACC:           0.3209
+2026-11-19 20:32:56,844 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:32:56,844 [MainThread  ] [INFO ]  --------round 18 ------------
+2026-11-19 20:34:34,096 [MainThread  ] [INFO ]  ---------Test 18 ------------
+2026-11-19 20:34:43,164 [MainThread  ] [INFO ]  Clean ACC:              0.5511
+2026-11-19 20:34:43,164 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4172
+2026-11-19 20:34:43,164 [MainThread  ] [INFO ]  Backdoor ACC:           0.3003
+2026-11-19 20:34:43,164 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:34:43,164 [MainThread  ] [INFO ]  --------round 19 ------------
+2026-11-19 20:36:18,896 [MainThread  ] [INFO ]  ---------Test 19 ------------
+2026-11-19 20:36:27,947 [MainThread  ] [INFO ]  Clean ACC:              0.5613
+2026-11-19 20:36:27,947 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2894
+2026-11-19 20:36:27,947 [MainThread  ] [INFO ]  Backdoor ACC:           0.3647
+2026-11-19 20:36:27,947 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:36:27,947 [MainThread  ] [INFO ]  --------round 20 ------------
+2026-11-19 20:38:03,052 [MainThread  ] [INFO ]  ---------Test 20 ------------
+2026-11-19 20:38:12,223 [MainThread  ] [INFO ]  Clean ACC:              0.5802
+2026-11-19 20:38:12,224 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3377
+2026-11-19 20:38:12,224 [MainThread  ] [INFO ]  Backdoor ACC:           0.3551
+2026-11-19 20:38:12,224 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:38:12,224 [MainThread  ] [INFO ]  --------round 21 ------------
+2026-11-19 20:39:49,871 [MainThread  ] [INFO ]  ---------Test 21 ------------
+2026-11-19 20:39:59,096 [MainThread  ] [INFO ]  Clean ACC:              0.5971
+2026-11-19 20:39:59,096 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3030
+2026-11-19 20:39:59,096 [MainThread  ] [INFO ]  Backdoor ACC:           0.3758
+2026-11-19 20:39:59,096 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:39:59,096 [MainThread  ] [INFO ]  --------round 22 ------------
+2026-11-19 20:41:36,792 [MainThread  ] [INFO ]  ---------Test 22 ------------
+2026-11-19 20:41:46,098 [MainThread  ] [INFO ]  Clean ACC:              0.6107
+2026-11-19 20:41:46,098 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3466
+2026-11-19 20:41:46,098 [MainThread  ] [INFO ]  Backdoor ACC:           0.3693
+2026-11-19 20:41:46,098 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:41:46,098 [MainThread  ] [INFO ]  --------round 23 ------------
+2026-11-19 20:43:23,494 [MainThread  ] [INFO ]  ---------Test 23 ------------
+2026-11-19 20:43:32,640 [MainThread  ] [INFO ]  Clean ACC:              0.6267
+2026-11-19 20:43:32,640 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3421
+2026-11-19 20:43:32,640 [MainThread  ] [INFO ]  Backdoor ACC:           0.3998
+2026-11-19 20:43:32,640 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:43:32,640 [MainThread  ] [INFO ]  --------round 24 ------------
+2026-11-19 20:45:11,335 [MainThread  ] [INFO ]  ---------Test 24 ------------
+2026-11-19 20:45:20,483 [MainThread  ] [INFO ]  Clean ACC:              0.6327
+2026-11-19 20:45:20,483 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2833
+2026-11-19 20:45:20,483 [MainThread  ] [INFO ]  Backdoor ACC:           0.4216
+2026-11-19 20:45:20,483 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:45:20,483 [MainThread  ] [INFO ]  --------round 25 ------------
+2026-11-19 20:46:56,490 [MainThread  ] [INFO ]  ---------Test 25 ------------
+2026-11-19 20:47:05,735 [MainThread  ] [INFO ]  Clean ACC:              0.6427
+2026-11-19 20:47:05,735 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2506
+2026-11-19 20:47:05,735 [MainThread  ] [INFO ]  Backdoor ACC:           0.4476
+2026-11-19 20:47:05,735 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:47:05,735 [MainThread  ] [INFO ]  --------round 26 ------------
+2026-11-19 20:48:44,619 [MainThread  ] [INFO ]  ---------Test 26 ------------
+2026-11-19 20:48:54,526 [MainThread  ] [INFO ]  Clean ACC:              0.6610
+2026-11-19 20:48:54,526 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3212
+2026-11-19 20:48:54,526 [MainThread  ] [INFO ]  Backdoor ACC:           0.4217
+2026-11-19 20:48:54,526 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:48:54,526 [MainThread  ] [INFO ]  --------round 27 ------------
+2026-11-19 20:50:35,579 [MainThread  ] [INFO ]  ---------Test 27 ------------
+2026-11-19 20:50:45,424 [MainThread  ] [INFO ]  Clean ACC:              0.6570
+2026-11-19 20:50:45,424 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3033
+2026-11-19 20:50:45,424 [MainThread  ] [INFO ]  Backdoor ACC:           0.4248
+2026-11-19 20:50:45,424 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:50:45,424 [MainThread  ] [INFO ]  --------round 28 ------------
+2026-11-19 20:52:26,293 [MainThread  ] [INFO ]  ---------Test 28 ------------
+2026-11-19 20:52:35,620 [MainThread  ] [INFO ]  Clean ACC:              0.6701
+2026-11-19 20:52:35,621 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3310
+2026-11-19 20:52:35,621 [MainThread  ] [INFO ]  Backdoor ACC:           0.4266
+2026-11-19 20:52:35,621 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:52:35,621 [MainThread  ] [INFO ]  --------round 29 ------------
+2026-11-19 20:54:18,966 [MainThread  ] [INFO ]  ---------Test 29 ------------
+2026-11-19 20:54:29,097 [MainThread  ] [INFO ]  Clean ACC:              0.6780
+2026-11-19 20:54:29,097 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2978
+2026-11-19 20:54:29,097 [MainThread  ] [INFO ]  Backdoor ACC:           0.4541
+2026-11-19 20:54:29,097 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:54:29,097 [MainThread  ] [INFO ]  --------round 30 ------------
+2026-11-19 20:56:10,873 [MainThread  ] [INFO ]  ---------Test 30 ------------
+2026-11-19 20:56:20,288 [MainThread  ] [INFO ]  Clean ACC:              0.6858
+2026-11-19 20:56:20,288 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2747
+2026-11-19 20:56:20,288 [MainThread  ] [INFO ]  Backdoor ACC:           0.4684
+2026-11-19 20:56:20,289 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:56:20,289 [MainThread  ] [INFO ]  --------round 31 ------------
+2026-11-19 20:58:00,768 [MainThread  ] [INFO ]  ---------Test 31 ------------
+2026-11-19 20:58:10,494 [MainThread  ] [INFO ]  Clean ACC:              0.6920
+2026-11-19 20:58:10,494 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2874
+2026-11-19 20:58:10,494 [MainThread  ] [INFO ]  Backdoor ACC:           0.4613
+2026-11-19 20:58:10,494 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 20:58:10,494 [MainThread  ] [INFO ]  --------round 32 ------------
+2026-11-19 20:59:51,507 [MainThread  ] [INFO ]  ---------Test 32 ------------
+2026-11-19 21:00:00,837 [MainThread  ] [INFO ]  Clean ACC:              0.7025
+2026-11-19 21:00:00,837 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2912
+2026-11-19 21:00:00,837 [MainThread  ] [INFO ]  Backdoor ACC:           0.4687
+2026-11-19 21:00:00,837 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:00:00,837 [MainThread  ] [INFO ]  --------round 33 ------------
+2026-11-19 21:01:38,522 [MainThread  ] [INFO ]  ---------Test 33 ------------
+2026-11-19 21:01:47,646 [MainThread  ] [INFO ]  Clean ACC:              0.7128
+2026-11-19 21:01:47,647 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3026
+2026-11-19 21:01:47,647 [MainThread  ] [INFO ]  Backdoor ACC:           0.4776
+2026-11-19 21:01:47,647 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:01:47,647 [MainThread  ] [INFO ]  --------round 34 ------------
+2026-11-19 21:03:26,268 [MainThread  ] [INFO ]  ---------Test 34 ------------
+2026-11-19 21:03:35,340 [MainThread  ] [INFO ]  Clean ACC:              0.7216
+2026-11-19 21:03:35,340 [MainThread  ] [INFO ]  Attack Success Ratio:   0.2912
+2026-11-19 21:03:35,340 [MainThread  ] [INFO ]  Backdoor ACC:           0.4886
+2026-11-19 21:03:35,340 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:03:35,340 [MainThread  ] [INFO ]  --------round 35 ------------
+2026-11-19 21:05:13,885 [MainThread  ] [INFO ]  ---------Test 35 ------------
+2026-11-19 21:05:23,172 [MainThread  ] [INFO ]  Clean ACC:              0.7286
+2026-11-19 21:05:23,172 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3424
+2026-11-19 21:05:23,172 [MainThread  ] [INFO ]  Backdoor ACC:           0.4613
+2026-11-19 21:05:23,172 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:05:23,172 [MainThread  ] [INFO ]  --------round 36 ------------
+2026-11-19 21:07:01,806 [MainThread  ] [INFO ]  ---------Test 36 ------------
+2026-11-19 21:07:10,837 [MainThread  ] [INFO ]  Clean ACC:              0.7339
+2026-11-19 21:07:10,837 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3588
+2026-11-19 21:07:10,837 [MainThread  ] [INFO ]  Backdoor ACC:           0.4602
+2026-11-19 21:07:10,838 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:07:10,838 [MainThread  ] [INFO ]  --------round 37 ------------
+2026-11-19 21:08:48,228 [MainThread  ] [INFO ]  ---------Test 37 ------------
+2026-11-19 21:08:57,477 [MainThread  ] [INFO ]  Clean ACC:              0.7325
+2026-11-19 21:08:57,477 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3083
+2026-11-19 21:08:57,477 [MainThread  ] [INFO ]  Backdoor ACC:           0.4760
+2026-11-19 21:08:57,477 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:08:57,477 [MainThread  ] [INFO ]  --------round 38 ------------
+2026-11-19 21:10:34,675 [MainThread  ] [INFO ]  ---------Test 38 ------------
+2026-11-19 21:10:44,093 [MainThread  ] [INFO ]  Clean ACC:              0.7378
+2026-11-19 21:10:44,093 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3407
+2026-11-19 21:10:44,093 [MainThread  ] [INFO ]  Backdoor ACC:           0.4648
+2026-11-19 21:10:44,093 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:10:44,093 [MainThread  ] [INFO ]  --------round 39 ------------
+2026-11-19 21:12:22,013 [MainThread  ] [INFO ]  ---------Test 39 ------------
+2026-11-19 21:12:31,091 [MainThread  ] [INFO ]  Clean ACC:              0.7430
+2026-11-19 21:12:31,091 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3728
+2026-11-19 21:12:31,091 [MainThread  ] [INFO ]  Backdoor ACC:           0.4569
+2026-11-19 21:12:31,091 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:12:31,091 [MainThread  ] [INFO ]  --------round 40 ------------
+2026-11-19 21:14:07,297 [MainThread  ] [INFO ]  ---------Test 40 ------------
+2026-11-19 21:14:16,402 [MainThread  ] [INFO ]  Clean ACC:              0.7481
+2026-11-19 21:14:16,402 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3171
+2026-11-19 21:14:16,402 [MainThread  ] [INFO ]  Backdoor ACC:           0.4914
+2026-11-19 21:14:16,402 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:14:16,402 [MainThread  ] [INFO ]  --------round 41 ------------
+2026-11-19 21:15:52,618 [MainThread  ] [INFO ]  ---------Test 41 ------------
+2026-11-19 21:16:01,885 [MainThread  ] [INFO ]  Clean ACC:              0.7508
+2026-11-19 21:16:01,885 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3542
+2026-11-19 21:16:01,885 [MainThread  ] [INFO ]  Backdoor ACC:           0.4631
+2026-11-19 21:16:01,885 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:16:01,885 [MainThread  ] [INFO ]  --------round 42 ------------
+2026-11-19 21:17:41,984 [MainThread  ] [INFO ]  ---------Test 42 ------------
+2026-11-19 21:17:51,342 [MainThread  ] [INFO ]  Clean ACC:              0.7584
+2026-11-19 21:17:51,343 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3736
+2026-11-19 21:17:51,343 [MainThread  ] [INFO ]  Backdoor ACC:           0.4636
+2026-11-19 21:17:51,343 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:17:51,343 [MainThread  ] [INFO ]  --------round 43 ------------
+2026-11-19 21:19:29,023 [MainThread  ] [INFO ]  ---------Test 43 ------------
+2026-11-19 21:19:38,105 [MainThread  ] [INFO ]  Clean ACC:              0.7632
+2026-11-19 21:19:38,105 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3637
+2026-11-19 21:19:38,105 [MainThread  ] [INFO ]  Backdoor ACC:           0.4682
+2026-11-19 21:19:38,106 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:19:38,106 [MainThread  ] [INFO ]  --------round 44 ------------
+2026-11-19 21:21:16,829 [MainThread  ] [INFO ]  ---------Test 44 ------------
+2026-11-19 21:21:26,165 [MainThread  ] [INFO ]  Clean ACC:              0.7696
+2026-11-19 21:21:26,165 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3427
+2026-11-19 21:21:26,165 [MainThread  ] [INFO ]  Backdoor ACC:           0.4743
+2026-11-19 21:21:26,165 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:21:26,165 [MainThread  ] [INFO ]  --------round 45 ------------
+2026-11-19 21:23:01,949 [MainThread  ] [INFO ]  ---------Test 45 ------------
+2026-11-19 21:23:11,076 [MainThread  ] [INFO ]  Clean ACC:              0.7664
+2026-11-19 21:23:11,076 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3984
+2026-11-19 21:23:11,076 [MainThread  ] [INFO ]  Backdoor ACC:           0.4543
+2026-11-19 21:23:11,076 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:23:11,076 [MainThread  ] [INFO ]  --------round 46 ------------
+2026-11-19 21:24:46,526 [MainThread  ] [INFO ]  ---------Test 46 ------------
+2026-11-19 21:24:55,578 [MainThread  ] [INFO ]  Clean ACC:              0.7723
+2026-11-19 21:24:55,579 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3604
+2026-11-19 21:24:55,579 [MainThread  ] [INFO ]  Backdoor ACC:           0.4631
+2026-11-19 21:24:55,579 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:24:55,579 [MainThread  ] [INFO ]  --------round 47 ------------
+2026-11-19 21:26:31,173 [MainThread  ] [INFO ]  ---------Test 47 ------------
+2026-11-19 21:26:40,209 [MainThread  ] [INFO ]  Clean ACC:              0.7682
+2026-11-19 21:26:40,209 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4248
+2026-11-19 21:26:40,209 [MainThread  ] [INFO ]  Backdoor ACC:           0.4177
+2026-11-19 21:26:40,209 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:26:40,209 [MainThread  ] [INFO ]  --------round 48 ------------
+2026-11-19 21:28:18,565 [MainThread  ] [INFO ]  ---------Test 48 ------------
+2026-11-19 21:28:28,334 [MainThread  ] [INFO ]  Clean ACC:              0.7758
+2026-11-19 21:28:28,335 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3641
+2026-11-19 21:28:28,335 [MainThread  ] [INFO ]  Backdoor ACC:           0.4667
+2026-11-19 21:28:28,335 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:28:28,335 [MainThread  ] [INFO ]  --------round 49 ------------
+2026-11-19 21:30:07,823 [MainThread  ] [INFO ]  ---------Test 49 ------------
+2026-11-19 21:30:16,906 [MainThread  ] [INFO ]  Clean ACC:              0.7845
+2026-11-19 21:30:16,906 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3739
+2026-11-19 21:30:16,906 [MainThread  ] [INFO ]  Backdoor ACC:           0.4604
+2026-11-19 21:30:16,906 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:30:16,906 [MainThread  ] [INFO ]  --------round 50 ------------
+2026-11-19 21:31:53,999 [MainThread  ] [INFO ]  ---------Test 50 ------------
+2026-11-19 21:32:03,085 [MainThread  ] [INFO ]  Clean ACC:              0.7865
+2026-11-19 21:32:03,085 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3557
+2026-11-19 21:32:03,085 [MainThread  ] [INFO ]  Backdoor ACC:           0.4801
+2026-11-19 21:32:03,085 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:32:03,086 [MainThread  ] [INFO ]  --------round 51 ------------
+2026-11-19 21:33:41,307 [MainThread  ] [INFO ]  ---------Test 51 ------------
+2026-11-19 21:33:50,514 [MainThread  ] [INFO ]  Clean ACC:              0.7906
+2026-11-19 21:33:50,514 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3860
+2026-11-19 21:33:50,514 [MainThread  ] [INFO ]  Backdoor ACC:           0.4589
+2026-11-19 21:33:50,514 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:33:50,514 [MainThread  ] [INFO ]  --------round 52 ------------
+2026-11-19 21:35:28,166 [MainThread  ] [INFO ]  ---------Test 52 ------------
+2026-11-19 21:35:37,258 [MainThread  ] [INFO ]  Clean ACC:              0.7899
+2026-11-19 21:35:37,259 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4097
+2026-11-19 21:35:37,259 [MainThread  ] [INFO ]  Backdoor ACC:           0.4531
+2026-11-19 21:35:37,259 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:35:37,259 [MainThread  ] [INFO ]  --------round 53 ------------
+2026-11-19 21:37:14,820 [MainThread  ] [INFO ]  ---------Test 53 ------------
+2026-11-19 21:37:23,909 [MainThread  ] [INFO ]  Clean ACC:              0.7945
+2026-11-19 21:37:23,909 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3786
+2026-11-19 21:37:23,909 [MainThread  ] [INFO ]  Backdoor ACC:           0.4584
+2026-11-19 21:37:23,909 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:37:23,909 [MainThread  ] [INFO ]  --------round 54 ------------
+2026-11-19 21:39:00,636 [MainThread  ] [INFO ]  ---------Test 54 ------------
+2026-11-19 21:39:09,973 [MainThread  ] [INFO ]  Clean ACC:              0.7958
+2026-11-19 21:39:09,974 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3684
+2026-11-19 21:39:09,974 [MainThread  ] [INFO ]  Backdoor ACC:           0.4644
+2026-11-19 21:39:09,974 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:39:09,974 [MainThread  ] [INFO ]  --------round 55 ------------
+2026-11-19 21:40:48,917 [MainThread  ] [INFO ]  ---------Test 55 ------------
+2026-11-19 21:40:58,540 [MainThread  ] [INFO ]  Clean ACC:              0.7989
+2026-11-19 21:40:58,540 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3966
+2026-11-19 21:40:58,540 [MainThread  ] [INFO ]  Backdoor ACC:           0.4556
+2026-11-19 21:40:58,540 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:40:58,540 [MainThread  ] [INFO ]  --------round 56 ------------
+2026-11-19 21:42:39,381 [MainThread  ] [INFO ]  ---------Test 56 ------------
+2026-11-19 21:42:48,713 [MainThread  ] [INFO ]  Clean ACC:              0.8011
+2026-11-19 21:42:48,713 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3981
+2026-11-19 21:42:48,713 [MainThread  ] [INFO ]  Backdoor ACC:           0.4497
+2026-11-19 21:42:48,714 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:42:48,714 [MainThread  ] [INFO ]  --------round 57 ------------
+2026-11-19 21:44:28,315 [MainThread  ] [INFO ]  ---------Test 57 ------------
+2026-11-19 21:44:37,441 [MainThread  ] [INFO ]  Clean ACC:              0.8008
+2026-11-19 21:44:37,441 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4460
+2026-11-19 21:44:37,441 [MainThread  ] [INFO ]  Backdoor ACC:           0.4250
+2026-11-19 21:44:37,441 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:44:37,441 [MainThread  ] [INFO ]  --------round 58 ------------
+2026-11-19 21:46:20,271 [MainThread  ] [INFO ]  ---------Test 58 ------------
+2026-11-19 21:46:29,990 [MainThread  ] [INFO ]  Clean ACC:              0.8032
+2026-11-19 21:46:29,991 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4361
+2026-11-19 21:46:29,991 [MainThread  ] [INFO ]  Backdoor ACC:           0.4249
+2026-11-19 21:46:29,991 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:46:29,991 [MainThread  ] [INFO ]  --------round 59 ------------
+2026-11-19 21:48:09,630 [MainThread  ] [INFO ]  ---------Test 59 ------------
+2026-11-19 21:48:18,848 [MainThread  ] [INFO ]  Clean ACC:              0.8073
+2026-11-19 21:48:18,848 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4163
+2026-11-19 21:48:18,848 [MainThread  ] [INFO ]  Backdoor ACC:           0.4424
+2026-11-19 21:48:18,848 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:48:18,848 [MainThread  ] [INFO ]  --------round 60 ------------
+2026-11-19 21:49:58,058 [MainThread  ] [INFO ]  ---------Test 60 ------------
+2026-11-19 21:50:07,155 [MainThread  ] [INFO ]  Clean ACC:              0.8066
+2026-11-19 21:50:07,156 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4058
+2026-11-19 21:50:07,156 [MainThread  ] [INFO ]  Backdoor ACC:           0.4523
+2026-11-19 21:50:07,156 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:50:07,156 [MainThread  ] [INFO ]  --------round 61 ------------
+2026-11-19 21:51:44,229 [MainThread  ] [INFO ]  ---------Test 61 ------------
+2026-11-19 21:51:53,311 [MainThread  ] [INFO ]  Clean ACC:              0.8100
+2026-11-19 21:51:53,311 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4034
+2026-11-19 21:51:53,311 [MainThread  ] [INFO ]  Backdoor ACC:           0.4549
+2026-11-19 21:51:53,311 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:51:53,311 [MainThread  ] [INFO ]  --------round 62 ------------
+2026-11-19 21:53:28,413 [MainThread  ] [INFO ]  ---------Test 62 ------------
+2026-11-19 21:53:37,499 [MainThread  ] [INFO ]  Clean ACC:              0.8114
+2026-11-19 21:53:37,500 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3958
+2026-11-19 21:53:37,500 [MainThread  ] [INFO ]  Backdoor ACC:           0.4659
+2026-11-19 21:53:37,500 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:53:37,500 [MainThread  ] [INFO ]  --------round 63 ------------
+2026-11-19 21:55:15,885 [MainThread  ] [INFO ]  ---------Test 63 ------------
+2026-11-19 21:55:24,968 [MainThread  ] [INFO ]  Clean ACC:              0.8117
+2026-11-19 21:55:24,968 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3659
+2026-11-19 21:55:24,968 [MainThread  ] [INFO ]  Backdoor ACC:           0.4724
+2026-11-19 21:55:24,968 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:55:24,969 [MainThread  ] [INFO ]  --------round 64 ------------
+2026-11-19 21:57:04,814 [MainThread  ] [INFO ]  ---------Test 64 ------------
+2026-11-19 21:57:13,899 [MainThread  ] [INFO ]  Clean ACC:              0.8146
+2026-11-19 21:57:13,899 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3896
+2026-11-19 21:57:13,899 [MainThread  ] [INFO ]  Backdoor ACC:           0.4627
+2026-11-19 21:57:13,899 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:57:13,899 [MainThread  ] [INFO ]  --------round 65 ------------
+2026-11-19 21:58:54,432 [MainThread  ] [INFO ]  ---------Test 65 ------------
+2026-11-19 21:59:03,528 [MainThread  ] [INFO ]  Clean ACC:              0.8148
+2026-11-19 21:59:03,528 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4112
+2026-11-19 21:59:03,528 [MainThread  ] [INFO ]  Backdoor ACC:           0.4484
+2026-11-19 21:59:03,528 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 21:59:03,528 [MainThread  ] [INFO ]  --------round 66 ------------
+2026-11-19 22:00:42,283 [MainThread  ] [INFO ]  ---------Test 66 ------------
+2026-11-19 22:00:51,361 [MainThread  ] [INFO ]  Clean ACC:              0.8157
+2026-11-19 22:00:51,361 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4177
+2026-11-19 22:00:51,361 [MainThread  ] [INFO ]  Backdoor ACC:           0.4453
+2026-11-19 22:00:51,361 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:00:51,361 [MainThread  ] [INFO ]  --------round 67 ------------
+2026-11-19 22:02:30,940 [MainThread  ] [INFO ]  ---------Test 67 ------------
+2026-11-19 22:02:40,154 [MainThread  ] [INFO ]  Clean ACC:              0.8180
+2026-11-19 22:02:40,154 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4538
+2026-11-19 22:02:40,154 [MainThread  ] [INFO ]  Backdoor ACC:           0.4320
+2026-11-19 22:02:40,154 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:02:40,154 [MainThread  ] [INFO ]  --------round 68 ------------
+2026-11-19 22:04:17,425 [MainThread  ] [INFO ]  ---------Test 68 ------------
+2026-11-19 22:04:26,505 [MainThread  ] [INFO ]  Clean ACC:              0.8174
+2026-11-19 22:04:26,506 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3974
+2026-11-19 22:04:26,506 [MainThread  ] [INFO ]  Backdoor ACC:           0.4440
+2026-11-19 22:04:26,506 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:04:26,506 [MainThread  ] [INFO ]  --------round 69 ------------
+2026-11-19 22:06:02,271 [MainThread  ] [INFO ]  ---------Test 69 ------------
+2026-11-19 22:06:11,460 [MainThread  ] [INFO ]  Clean ACC:              0.8238
+2026-11-19 22:06:11,460 [MainThread  ] [INFO ]  Attack Success Ratio:   0.3960
+2026-11-19 22:06:11,460 [MainThread  ] [INFO ]  Backdoor ACC:           0.4619
+2026-11-19 22:06:11,460 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:06:11,460 [MainThread  ] [INFO ]  --------round 70 ------------
+2026-11-19 22:07:46,545 [MainThread  ] [INFO ]  ---------Test 70 ------------
+2026-11-19 22:07:55,622 [MainThread  ] [INFO ]  Clean ACC:              0.8238
+2026-11-19 22:07:55,622 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4627
+2026-11-19 22:07:55,622 [MainThread  ] [INFO ]  Backdoor ACC:           0.4089
+2026-11-19 22:07:55,622 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:07:55,622 [MainThread  ] [INFO ]  --------round 71 ------------
+2026-11-19 22:09:34,988 [MainThread  ] [INFO ]  ---------Test 71 ------------
+2026-11-19 22:09:44,088 [MainThread  ] [INFO ]  Clean ACC:              0.8265
+2026-11-19 22:09:44,088 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4342
+2026-11-19 22:09:44,088 [MainThread  ] [INFO ]  Backdoor ACC:           0.4364
+2026-11-19 22:09:44,088 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:09:44,088 [MainThread  ] [INFO ]  --------round 72 ------------
+2026-11-19 22:11:24,058 [MainThread  ] [INFO ]  ---------Test 72 ------------
+2026-11-19 22:11:33,080 [MainThread  ] [INFO ]  Clean ACC:              0.8270
+2026-11-19 22:11:33,080 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4941
+2026-11-19 22:11:33,080 [MainThread  ] [INFO ]  Backdoor ACC:           0.4006
+2026-11-19 22:11:33,080 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:11:33,080 [MainThread  ] [INFO ]  --------round 73 ------------
+2026-11-19 22:13:11,365 [MainThread  ] [INFO ]  ---------Test 73 ------------
+2026-11-19 22:13:20,408 [MainThread  ] [INFO ]  Clean ACC:              0.8314
+2026-11-19 22:13:20,408 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4744
+2026-11-19 22:13:20,408 [MainThread  ] [INFO ]  Backdoor ACC:           0.4126
+2026-11-19 22:13:20,408 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:13:20,408 [MainThread  ] [INFO ]  --------round 74 ------------
+2026-11-19 22:14:59,366 [MainThread  ] [INFO ]  ---------Test 74 ------------
+2026-11-19 22:15:08,424 [MainThread  ] [INFO ]  Clean ACC:              0.8301
+2026-11-19 22:15:08,424 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4768
+2026-11-19 22:15:08,424 [MainThread  ] [INFO ]  Backdoor ACC:           0.4177
+2026-11-19 22:15:08,424 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:15:08,424 [MainThread  ] [INFO ]  --------round 75 ------------
+2026-11-19 22:16:50,656 [MainThread  ] [INFO ]  ---------Test 75 ------------
+2026-11-19 22:17:00,519 [MainThread  ] [INFO ]  Clean ACC:              0.8320
+2026-11-19 22:17:00,519 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5371
+2026-11-19 22:17:00,519 [MainThread  ] [INFO ]  Backdoor ACC:           0.3662
+2026-11-19 22:17:00,520 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:17:00,520 [MainThread  ] [INFO ]  --------round 76 ------------
+2026-11-19 22:18:39,167 [MainThread  ] [INFO ]  ---------Test 76 ------------
+2026-11-19 22:18:48,459 [MainThread  ] [INFO ]  Clean ACC:              0.8307
+2026-11-19 22:18:48,459 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4769
+2026-11-19 22:18:48,459 [MainThread  ] [INFO ]  Backdoor ACC:           0.4114
+2026-11-19 22:18:48,459 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:18:48,459 [MainThread  ] [INFO ]  --------round 77 ------------
+2026-11-19 22:20:28,345 [MainThread  ] [INFO ]  ---------Test 77 ------------
+2026-11-19 22:20:37,633 [MainThread  ] [INFO ]  Clean ACC:              0.8365
+2026-11-19 22:20:37,633 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4758
+2026-11-19 22:20:37,633 [MainThread  ] [INFO ]  Backdoor ACC:           0.4086
+2026-11-19 22:20:37,633 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:20:37,633 [MainThread  ] [INFO ]  --------round 78 ------------
+2026-11-19 22:22:15,789 [MainThread  ] [INFO ]  ---------Test 78 ------------
+2026-11-19 22:22:24,852 [MainThread  ] [INFO ]  Clean ACC:              0.8330
+2026-11-19 22:22:24,852 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4603
+2026-11-19 22:22:24,852 [MainThread  ] [INFO ]  Backdoor ACC:           0.4247
+2026-11-19 22:22:24,852 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:22:24,852 [MainThread  ] [INFO ]  --------round 79 ------------
+2026-11-19 22:24:06,059 [MainThread  ] [INFO ]  ---------Test 79 ------------
+2026-11-19 22:24:15,122 [MainThread  ] [INFO ]  Clean ACC:              0.8342
+2026-11-19 22:24:15,122 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4790
+2026-11-19 22:24:15,122 [MainThread  ] [INFO ]  Backdoor ACC:           0.4146
+2026-11-19 22:24:15,122 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:24:15,122 [MainThread  ] [INFO ]  --------round 80 ------------
+2026-11-19 22:25:52,082 [MainThread  ] [INFO ]  ---------Test 80 ------------
+2026-11-19 22:26:01,375 [MainThread  ] [INFO ]  Clean ACC:              0.8374
+2026-11-19 22:26:01,376 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4959
+2026-11-19 22:26:01,376 [MainThread  ] [INFO ]  Backdoor ACC:           0.4019
+2026-11-19 22:26:01,376 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:26:01,376 [MainThread  ] [INFO ]  --------round 81 ------------
+2026-11-19 22:27:37,289 [MainThread  ] [INFO ]  ---------Test 81 ------------
+2026-11-19 22:27:46,351 [MainThread  ] [INFO ]  Clean ACC:              0.8388
+2026-11-19 22:27:46,351 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5133
+2026-11-19 22:27:46,351 [MainThread  ] [INFO ]  Backdoor ACC:           0.3932
+2026-11-19 22:27:46,351 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:27:46,351 [MainThread  ] [INFO ]  --------round 82 ------------
+2026-11-19 22:29:23,511 [MainThread  ] [INFO ]  ---------Test 82 ------------
+2026-11-19 22:29:32,685 [MainThread  ] [INFO ]  Clean ACC:              0.8375
+2026-11-19 22:29:32,685 [MainThread  ] [INFO ]  Attack Success Ratio:   0.4748
+2026-11-19 22:29:32,685 [MainThread  ] [INFO ]  Backdoor ACC:           0.4212
+2026-11-19 22:29:32,685 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:29:32,685 [MainThread  ] [INFO ]  --------round 83 ------------
+2026-11-19 22:31:08,262 [MainThread  ] [INFO ]  ---------Test 83 ------------
+2026-11-19 22:31:17,524 [MainThread  ] [INFO ]  Clean ACC:              0.8402
+2026-11-19 22:31:17,524 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5384
+2026-11-19 22:31:17,524 [MainThread  ] [INFO ]  Backdoor ACC:           0.3758
+2026-11-19 22:31:17,524 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:31:17,524 [MainThread  ] [INFO ]  --------round 84 ------------
+2026-11-19 22:32:56,991 [MainThread  ] [INFO ]  ---------Test 84 ------------
+2026-11-19 22:33:06,225 [MainThread  ] [INFO ]  Clean ACC:              0.8406
+2026-11-19 22:33:06,226 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5159
+2026-11-19 22:33:06,226 [MainThread  ] [INFO ]  Backdoor ACC:           0.3898
+2026-11-19 22:33:06,226 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:33:06,226 [MainThread  ] [INFO ]  --------round 85 ------------
+2026-11-19 22:34:45,862 [MainThread  ] [INFO ]  ---------Test 85 ------------
+2026-11-19 22:34:55,206 [MainThread  ] [INFO ]  Clean ACC:              0.8402
+2026-11-19 22:34:55,207 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5518
+2026-11-19 22:34:55,207 [MainThread  ] [INFO ]  Backdoor ACC:           0.3647
+2026-11-19 22:34:55,207 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:34:55,207 [MainThread  ] [INFO ]  --------round 86 ------------
+2026-11-19 22:36:33,923 [MainThread  ] [INFO ]  ---------Test 86 ------------
+2026-11-19 22:36:43,291 [MainThread  ] [INFO ]  Clean ACC:              0.8400
+2026-11-19 22:36:43,292 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5463
+2026-11-19 22:36:43,292 [MainThread  ] [INFO ]  Backdoor ACC:           0.3776
+2026-11-19 22:36:43,292 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:36:43,292 [MainThread  ] [INFO ]  --------round 87 ------------
+2026-11-19 22:38:21,879 [MainThread  ] [INFO ]  ---------Test 87 ------------
+2026-11-19 22:38:32,013 [MainThread  ] [INFO ]  Clean ACC:              0.8431
+2026-11-19 22:38:32,013 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5252
+2026-11-19 22:38:32,013 [MainThread  ] [INFO ]  Backdoor ACC:           0.3970
+2026-11-19 22:38:32,013 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:38:32,013 [MainThread  ] [INFO ]  --------round 88 ------------
+2026-11-19 22:40:13,872 [MainThread  ] [INFO ]  ---------Test 88 ------------
+2026-11-19 22:40:25,032 [MainThread  ] [INFO ]  Clean ACC:              0.8476
+2026-11-19 22:40:25,033 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5491
+2026-11-19 22:40:25,033 [MainThread  ] [INFO ]  Backdoor ACC:           0.3772
+2026-11-19 22:40:25,033 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:40:25,033 [MainThread  ] [INFO ]  --------round 89 ------------
+2026-11-19 22:42:06,856 [MainThread  ] [INFO ]  ---------Test 89 ------------
+2026-11-19 22:42:16,166 [MainThread  ] [INFO ]  Clean ACC:              0.8438
+2026-11-19 22:42:16,166 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5057
+2026-11-19 22:42:16,166 [MainThread  ] [INFO ]  Backdoor ACC:           0.4046
+2026-11-19 22:42:16,166 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:42:16,166 [MainThread  ] [INFO ]  --------round 90 ------------
+2026-11-19 22:43:56,384 [MainThread  ] [INFO ]  ---------Test 90 ------------
+2026-11-19 22:44:05,617 [MainThread  ] [INFO ]  Clean ACC:              0.8464
+2026-11-19 22:44:05,618 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5357
+2026-11-19 22:44:05,618 [MainThread  ] [INFO ]  Backdoor ACC:           0.3852
+2026-11-19 22:44:05,618 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:44:05,618 [MainThread  ] [INFO ]  --------round 91 ------------
+2026-11-19 22:45:47,251 [MainThread  ] [INFO ]  ---------Test 91 ------------
+2026-11-19 22:45:56,873 [MainThread  ] [INFO ]  Clean ACC:              0.8465
+2026-11-19 22:45:56,873 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5646
+2026-11-19 22:45:56,873 [MainThread  ] [INFO ]  Backdoor ACC:           0.3633
+2026-11-19 22:45:56,873 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:45:56,873 [MainThread  ] [INFO ]  --------round 92 ------------
+2026-11-19 22:47:37,491 [MainThread  ] [INFO ]  ---------Test 92 ------------
+2026-11-19 22:47:46,939 [MainThread  ] [INFO ]  Clean ACC:              0.8465
+2026-11-19 22:47:46,939 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5651
+2026-11-19 22:47:46,939 [MainThread  ] [INFO ]  Backdoor ACC:           0.3659
+2026-11-19 22:47:46,939 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:47:46,939 [MainThread  ] [INFO ]  --------round 93 ------------
+2026-11-19 22:49:27,592 [MainThread  ] [INFO ]  ---------Test 93 ------------
+2026-11-19 22:49:37,024 [MainThread  ] [INFO ]  Clean ACC:              0.8451
+2026-11-19 22:49:37,025 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5642
+2026-11-19 22:49:37,025 [MainThread  ] [INFO ]  Backdoor ACC:           0.3678
+2026-11-19 22:49:37,025 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:49:37,025 [MainThread  ] [INFO ]  --------round 94 ------------
+2026-11-19 22:51:20,969 [MainThread  ] [INFO ]  ---------Test 94 ------------
+2026-11-19 22:51:30,323 [MainThread  ] [INFO ]  Clean ACC:              0.8456
+2026-11-19 22:51:30,324 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5533
+2026-11-19 22:51:30,324 [MainThread  ] [INFO ]  Backdoor ACC:           0.3772
+2026-11-19 22:51:30,324 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:51:30,324 [MainThread  ] [INFO ]  --------round 95 ------------
+2026-11-19 22:53:08,995 [MainThread  ] [INFO ]  ---------Test 95 ------------
+2026-11-19 22:53:18,704 [MainThread  ] [INFO ]  Clean ACC:              0.8457
+2026-11-19 22:53:18,705 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5633
+2026-11-19 22:53:18,706 [MainThread  ] [INFO ]  Backdoor ACC:           0.3670
+2026-11-19 22:53:18,706 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:53:18,706 [MainThread  ] [INFO ]  --------round 96 ------------
+2026-11-19 22:54:54,389 [MainThread  ] [INFO ]  ---------Test 96 ------------
+2026-11-19 22:55:03,421 [MainThread  ] [INFO ]  Clean ACC:              0.8477
+2026-11-19 22:55:03,421 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6062
+2026-11-19 22:55:03,422 [MainThread  ] [INFO ]  Backdoor ACC:           0.3336
+2026-11-19 22:55:03,422 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:55:03,422 [MainThread  ] [INFO ]  --------round 97 ------------
+2026-11-19 22:56:39,151 [MainThread  ] [INFO ]  ---------Test 97 ------------
+2026-11-19 22:56:48,655 [MainThread  ] [INFO ]  Clean ACC:              0.8441
+2026-11-19 22:56:48,655 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5451
+2026-11-19 22:56:48,655 [MainThread  ] [INFO ]  Backdoor ACC:           0.3806
+2026-11-19 22:56:48,655 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:56:48,655 [MainThread  ] [INFO ]  --------round 98 ------------
+2026-11-19 22:58:29,459 [MainThread  ] [INFO ]  ---------Test 98 ------------
+2026-11-19 22:58:38,599 [MainThread  ] [INFO ]  Clean ACC:              0.8471
+2026-11-19 22:58:38,599 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5680
+2026-11-19 22:58:38,599 [MainThread  ] [INFO ]  Backdoor ACC:           0.3684
+2026-11-19 22:58:38,599 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 22:58:38,599 [MainThread  ] [INFO ]  --------round 99 ------------
+2026-11-19 23:00:15,743 [MainThread  ] [INFO ]  ---------Test 99 ------------
+2026-11-19 23:00:25,395 [MainThread  ] [INFO ]  Clean ACC:              0.8504
+2026-11-19 23:00:25,396 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5621
+2026-11-19 23:00:25,396 [MainThread  ] [INFO ]  Backdoor ACC:           0.3729
+2026-11-19 23:00:25,396 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:00:25,396 [MainThread  ] [INFO ]  --------round 100 ------------
+2026-11-19 23:02:04,233 [MainThread  ] [INFO ]  ---------Test 100 ------------
+2026-11-19 23:02:13,416 [MainThread  ] [INFO ]  Clean ACC:              0.8483
+2026-11-19 23:02:13,416 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5503
+2026-11-19 23:02:13,416 [MainThread  ] [INFO ]  Backdoor ACC:           0.3761
+2026-11-19 23:02:13,416 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:02:13,416 [MainThread  ] [INFO ]  --------round 101 ------------
+2026-11-19 23:03:52,722 [MainThread  ] [INFO ]  ---------Test 101 ------------
+2026-11-19 23:04:01,924 [MainThread  ] [INFO ]  Clean ACC:              0.8524
+2026-11-19 23:04:01,924 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5924
+2026-11-19 23:04:01,924 [MainThread  ] [INFO ]  Backdoor ACC:           0.3469
+2026-11-19 23:04:01,924 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:04:01,924 [MainThread  ] [INFO ]  --------round 102 ------------
+2026-11-19 23:05:39,078 [MainThread  ] [INFO ]  ---------Test 102 ------------
+2026-11-19 23:05:48,371 [MainThread  ] [INFO ]  Clean ACC:              0.8527
+2026-11-19 23:05:48,371 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6190
+2026-11-19 23:05:48,371 [MainThread  ] [INFO ]  Backdoor ACC:           0.3290
+2026-11-19 23:05:48,371 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:05:48,371 [MainThread  ] [INFO ]  --------round 103 ------------
+2026-11-19 23:07:25,375 [MainThread  ] [INFO ]  ---------Test 103 ------------
+2026-11-19 23:07:34,572 [MainThread  ] [INFO ]  Clean ACC:              0.8547
+2026-11-19 23:07:34,572 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5914
+2026-11-19 23:07:34,572 [MainThread  ] [INFO ]  Backdoor ACC:           0.3421
+2026-11-19 23:07:34,572 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:07:34,572 [MainThread  ] [INFO ]  --------round 104 ------------
+2026-11-19 23:09:12,314 [MainThread  ] [INFO ]  ---------Test 104 ------------
+2026-11-19 23:09:21,412 [MainThread  ] [INFO ]  Clean ACC:              0.8510
+2026-11-19 23:09:21,412 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5777
+2026-11-19 23:09:21,412 [MainThread  ] [INFO ]  Backdoor ACC:           0.3590
+2026-11-19 23:09:21,412 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:09:21,412 [MainThread  ] [INFO ]  --------round 105 ------------
+2026-11-19 23:10:58,447 [MainThread  ] [INFO ]  ---------Test 105 ------------
+2026-11-19 23:11:07,722 [MainThread  ] [INFO ]  Clean ACC:              0.8534
+2026-11-19 23:11:07,723 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5842
+2026-11-19 23:11:07,723 [MainThread  ] [INFO ]  Backdoor ACC:           0.3561
+2026-11-19 23:11:07,723 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:11:07,723 [MainThread  ] [INFO ]  --------round 106 ------------
+2026-11-19 23:12:45,472 [MainThread  ] [INFO ]  ---------Test 106 ------------
+2026-11-19 23:12:54,685 [MainThread  ] [INFO ]  Clean ACC:              0.8532
+2026-11-19 23:12:54,685 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6077
+2026-11-19 23:12:54,685 [MainThread  ] [INFO ]  Backdoor ACC:           0.3384
+2026-11-19 23:12:54,685 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:12:54,685 [MainThread  ] [INFO ]  --------round 107 ------------
+2026-11-19 23:14:34,942 [MainThread  ] [INFO ]  ---------Test 107 ------------
+2026-11-19 23:14:44,784 [MainThread  ] [INFO ]  Clean ACC:              0.8598
+2026-11-19 23:14:44,784 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5922
+2026-11-19 23:14:44,784 [MainThread  ] [INFO ]  Backdoor ACC:           0.3528
+2026-11-19 23:14:44,784 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:14:44,784 [MainThread  ] [INFO ]  --------round 108 ------------
+2026-11-19 23:16:25,432 [MainThread  ] [INFO ]  ---------Test 108 ------------
+2026-11-19 23:16:35,299 [MainThread  ] [INFO ]  Clean ACC:              0.8560
+2026-11-19 23:16:35,300 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5996
+2026-11-19 23:16:35,300 [MainThread  ] [INFO ]  Backdoor ACC:           0.3453
+2026-11-19 23:16:35,300 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:16:35,300 [MainThread  ] [INFO ]  --------round 109 ------------
+2026-11-19 23:18:15,106 [MainThread  ] [INFO ]  ---------Test 109 ------------
+2026-11-19 23:18:24,585 [MainThread  ] [INFO ]  Clean ACC:              0.8572
+2026-11-19 23:18:24,585 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5816
+2026-11-19 23:18:24,585 [MainThread  ] [INFO ]  Backdoor ACC:           0.3628
+2026-11-19 23:18:24,585 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:18:24,585 [MainThread  ] [INFO ]  --------round 110 ------------
+2026-11-19 23:20:03,113 [MainThread  ] [INFO ]  ---------Test 110 ------------
+2026-11-19 23:20:12,477 [MainThread  ] [INFO ]  Clean ACC:              0.8577
+2026-11-19 23:20:12,477 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5928
+2026-11-19 23:20:12,477 [MainThread  ] [INFO ]  Backdoor ACC:           0.3512
+2026-11-19 23:20:12,477 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:20:12,477 [MainThread  ] [INFO ]  --------round 111 ------------
+2026-11-19 23:21:51,958 [MainThread  ] [INFO ]  ---------Test 111 ------------
+2026-11-19 23:22:01,795 [MainThread  ] [INFO ]  Clean ACC:              0.8554
+2026-11-19 23:22:01,795 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6192
+2026-11-19 23:22:01,795 [MainThread  ] [INFO ]  Backdoor ACC:           0.3289
+2026-11-19 23:22:01,795 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:22:01,795 [MainThread  ] [INFO ]  --------round 112 ------------
+2026-11-19 23:23:42,035 [MainThread  ] [INFO ]  ---------Test 112 ------------
+2026-11-19 23:23:51,091 [MainThread  ] [INFO ]  Clean ACC:              0.8579
+2026-11-19 23:23:51,091 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6137
+2026-11-19 23:23:51,091 [MainThread  ] [INFO ]  Backdoor ACC:           0.3350
+2026-11-19 23:23:51,091 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:23:51,091 [MainThread  ] [INFO ]  --------round 113 ------------
+2026-11-19 23:25:30,533 [MainThread  ] [INFO ]  ---------Test 113 ------------
+2026-11-19 23:25:39,690 [MainThread  ] [INFO ]  Clean ACC:              0.8567
+2026-11-19 23:25:39,690 [MainThread  ] [INFO ]  Attack Success Ratio:   0.5751
+2026-11-19 23:25:39,690 [MainThread  ] [INFO ]  Backdoor ACC:           0.3656
+2026-11-19 23:25:39,690 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:25:39,690 [MainThread  ] [INFO ]  --------round 114 ------------
+2026-11-19 23:27:16,622 [MainThread  ] [INFO ]  ---------Test 114 ------------
+2026-11-19 23:27:25,994 [MainThread  ] [INFO ]  Clean ACC:              0.8567
+2026-11-19 23:27:25,994 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6303
+2026-11-19 23:27:25,994 [MainThread  ] [INFO ]  Backdoor ACC:           0.3236
+2026-11-19 23:27:25,994 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:27:25,994 [MainThread  ] [INFO ]  --------round 115 ------------
+2026-11-19 23:29:03,730 [MainThread  ] [INFO ]  ---------Test 115 ------------
+2026-11-19 23:29:12,779 [MainThread  ] [INFO ]  Clean ACC:              0.8588
+2026-11-19 23:29:12,779 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6158
+2026-11-19 23:29:12,779 [MainThread  ] [INFO ]  Backdoor ACC:           0.3366
+2026-11-19 23:29:12,779 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:29:12,779 [MainThread  ] [INFO ]  --------round 116 ------------
+2026-11-19 23:30:51,891 [MainThread  ] [INFO ]  ---------Test 116 ------------
+2026-11-19 23:31:01,225 [MainThread  ] [INFO ]  Clean ACC:              0.8567
+2026-11-19 23:31:01,225 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6111
+2026-11-19 23:31:01,225 [MainThread  ] [INFO ]  Backdoor ACC:           0.3341
+2026-11-19 23:31:01,225 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:31:01,225 [MainThread  ] [INFO ]  --------round 117 ------------
+2026-11-19 23:32:39,260 [MainThread  ] [INFO ]  ---------Test 117 ------------
+2026-11-19 23:32:48,627 [MainThread  ] [INFO ]  Clean ACC:              0.8593
+2026-11-19 23:32:48,627 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6384
+2026-11-19 23:32:48,627 [MainThread  ] [INFO ]  Backdoor ACC:           0.3162
+2026-11-19 23:32:48,627 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:32:48,627 [MainThread  ] [INFO ]  --------round 118 ------------
+2026-11-19 23:34:25,083 [MainThread  ] [INFO ]  ---------Test 118 ------------
+2026-11-19 23:34:34,143 [MainThread  ] [INFO ]  Clean ACC:              0.8589
+2026-11-19 23:34:34,144 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6129
+2026-11-19 23:34:34,144 [MainThread  ] [INFO ]  Backdoor ACC:           0.3351
+2026-11-19 23:34:34,144 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:34:34,144 [MainThread  ] [INFO ]  --------round 119 ------------
+2026-11-19 23:36:10,332 [MainThread  ] [INFO ]  ---------Test 119 ------------
+2026-11-19 23:36:19,472 [MainThread  ] [INFO ]  Clean ACC:              0.8604
+2026-11-19 23:36:19,472 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6059
+2026-11-19 23:36:19,472 [MainThread  ] [INFO ]  Backdoor ACC:           0.3447
+2026-11-19 23:36:19,472 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:36:19,472 [MainThread  ] [INFO ]  --------round 120 ------------
+2026-11-19 23:37:56,228 [MainThread  ] [INFO ]  ---------Test 120 ------------
+2026-11-19 23:38:05,465 [MainThread  ] [INFO ]  Clean ACC:              0.8588
+2026-11-19 23:38:05,465 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6220
+2026-11-19 23:38:05,465 [MainThread  ] [INFO ]  Backdoor ACC:           0.3300
+2026-11-19 23:38:05,465 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:38:05,466 [MainThread  ] [INFO ]  --------round 121 ------------
+2026-11-19 23:39:43,719 [MainThread  ] [INFO ]  ---------Test 121 ------------
+2026-11-19 23:39:53,944 [MainThread  ] [INFO ]  Clean ACC:              0.8621
+2026-11-19 23:39:53,944 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6393
+2026-11-19 23:39:53,944 [MainThread  ] [INFO ]  Backdoor ACC:           0.3169
+2026-11-19 23:39:53,944 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:39:53,944 [MainThread  ] [INFO ]  --------round 122 ------------
+2026-11-19 23:41:33,089 [MainThread  ] [INFO ]  ---------Test 122 ------------
+2026-11-19 23:41:42,120 [MainThread  ] [INFO ]  Clean ACC:              0.8611
+2026-11-19 23:41:42,121 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6276
+2026-11-19 23:41:42,121 [MainThread  ] [INFO ]  Backdoor ACC:           0.3233
+2026-11-19 23:41:42,121 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:41:42,121 [MainThread  ] [INFO ]  --------round 123 ------------
+2026-11-19 23:43:19,895 [MainThread  ] [INFO ]  ---------Test 123 ------------
+2026-11-19 23:43:28,941 [MainThread  ] [INFO ]  Clean ACC:              0.8628
+2026-11-19 23:43:28,941 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6513
+2026-11-19 23:43:28,941 [MainThread  ] [INFO ]  Backdoor ACC:           0.3083
+2026-11-19 23:43:28,941 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:43:28,941 [MainThread  ] [INFO ]  --------round 124 ------------
+2026-11-19 23:45:09,910 [MainThread  ] [INFO ]  ---------Test 124 ------------
+2026-11-19 23:45:19,656 [MainThread  ] [INFO ]  Clean ACC:              0.8593
+2026-11-19 23:45:19,656 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6357
+2026-11-19 23:45:19,656 [MainThread  ] [INFO ]  Backdoor ACC:           0.3188
+2026-11-19 23:45:19,656 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:45:19,656 [MainThread  ] [INFO ]  --------round 125 ------------
+2026-11-19 23:47:00,290 [MainThread  ] [INFO ]  ---------Test 125 ------------
+2026-11-19 23:47:09,341 [MainThread  ] [INFO ]  Clean ACC:              0.8618
+2026-11-19 23:47:09,341 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6357
+2026-11-19 23:47:09,341 [MainThread  ] [INFO ]  Backdoor ACC:           0.3197
+2026-11-19 23:47:09,341 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:47:09,341 [MainThread  ] [INFO ]  --------round 126 ------------
+2026-11-19 23:48:48,948 [MainThread  ] [INFO ]  ---------Test 126 ------------
+2026-11-19 23:48:58,204 [MainThread  ] [INFO ]  Clean ACC:              0.8595
+2026-11-19 23:48:58,205 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6404
+2026-11-19 23:48:58,205 [MainThread  ] [INFO ]  Backdoor ACC:           0.3143
+2026-11-19 23:48:58,205 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:48:58,205 [MainThread  ] [INFO ]  --------round 127 ------------
+2026-11-19 23:50:38,816 [MainThread  ] [INFO ]  ---------Test 127 ------------
+2026-11-19 23:50:48,105 [MainThread  ] [INFO ]  Clean ACC:              0.8596
+2026-11-19 23:50:48,105 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6437
+2026-11-19 23:50:48,105 [MainThread  ] [INFO ]  Backdoor ACC:           0.3161
+2026-11-19 23:50:48,105 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:50:48,105 [MainThread  ] [INFO ]  --------round 128 ------------
+2026-11-19 23:52:25,234 [MainThread  ] [INFO ]  ---------Test 128 ------------
+2026-11-19 23:52:34,565 [MainThread  ] [INFO ]  Clean ACC:              0.8637
+2026-11-19 23:52:34,565 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6538
+2026-11-19 23:52:34,565 [MainThread  ] [INFO ]  Backdoor ACC:           0.3084
+2026-11-19 23:52:34,565 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:52:34,565 [MainThread  ] [INFO ]  --------round 129 ------------
+2026-11-19 23:54:11,665 [MainThread  ] [INFO ]  ---------Test 129 ------------
+2026-11-19 23:54:20,837 [MainThread  ] [INFO ]  Clean ACC:              0.8618
+2026-11-19 23:54:20,837 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6510
+2026-11-19 23:54:20,837 [MainThread  ] [INFO ]  Backdoor ACC:           0.3091
+2026-11-19 23:54:20,837 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:54:20,837 [MainThread  ] [INFO ]  --------round 130 ------------
+2026-11-19 23:56:02,345 [MainThread  ] [INFO ]  ---------Test 130 ------------
+2026-11-19 23:56:11,726 [MainThread  ] [INFO ]  Clean ACC:              0.8632
+2026-11-19 23:56:11,726 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6490
+2026-11-19 23:56:11,726 [MainThread  ] [INFO ]  Backdoor ACC:           0.3099
+2026-11-19 23:56:11,726 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:56:11,726 [MainThread  ] [INFO ]  --------round 131 ------------
+2026-11-19 23:57:51,045 [MainThread  ] [INFO ]  ---------Test 131 ------------
+2026-11-19 23:58:00,092 [MainThread  ] [INFO ]  Clean ACC:              0.8647
+2026-11-19 23:58:00,092 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6850
+2026-11-19 23:58:00,092 [MainThread  ] [INFO ]  Backdoor ACC:           0.2807
+2026-11-19 23:58:00,092 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:58:00,092 [MainThread  ] [INFO ]  --------round 132 ------------
+2026-11-19 23:59:39,518 [MainThread  ] [INFO ]  ---------Test 132 ------------
+2026-11-19 23:59:48,669 [MainThread  ] [INFO ]  Clean ACC:              0.8641
+2026-11-19 23:59:48,669 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6819
+2026-11-19 23:59:48,669 [MainThread  ] [INFO ]  Backdoor ACC:           0.2848
+2026-11-19 23:59:48,669 [MainThread  ] [INFO ]  ------------------------------
+2026-11-19 23:59:48,669 [MainThread  ] [INFO ]  --------round 133 ------------
+2026-11-20 00:01:28,470 [MainThread  ] [INFO ]  ---------Test 133 ------------
+2026-11-20 00:01:37,665 [MainThread  ] [INFO ]  Clean ACC:              0.8635
+2026-11-20 00:01:37,665 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6677
+2026-11-20 00:01:37,666 [MainThread  ] [INFO ]  Backdoor ACC:           0.2982
+2026-11-20 00:01:37,666 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:01:37,666 [MainThread  ] [INFO ]  --------round 134 ------------
+2026-11-20 00:03:16,942 [MainThread  ] [INFO ]  ---------Test 134 ------------
+2026-11-20 00:03:26,365 [MainThread  ] [INFO ]  Clean ACC:              0.8644
+2026-11-20 00:03:26,365 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6776
+2026-11-20 00:03:26,365 [MainThread  ] [INFO ]  Backdoor ACC:           0.2876
+2026-11-20 00:03:26,366 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:03:26,366 [MainThread  ] [INFO ]  --------round 135 ------------
+2026-11-20 00:05:06,007 [MainThread  ] [INFO ]  ---------Test 135 ------------
+2026-11-20 00:05:15,854 [MainThread  ] [INFO ]  Clean ACC:              0.8644
+2026-11-20 00:05:15,854 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6738
+2026-11-20 00:05:15,854 [MainThread  ] [INFO ]  Backdoor ACC:           0.2924
+2026-11-20 00:05:15,854 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:05:15,854 [MainThread  ] [INFO ]  --------round 136 ------------
+2026-11-20 00:06:55,385 [MainThread  ] [INFO ]  ---------Test 136 ------------
+2026-11-20 00:07:04,451 [MainThread  ] [INFO ]  Clean ACC:              0.8654
+2026-11-20 00:07:04,451 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6621
+2026-11-20 00:07:04,451 [MainThread  ] [INFO ]  Backdoor ACC:           0.3003
+2026-11-20 00:07:04,451 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:07:04,451 [MainThread  ] [INFO ]  --------round 137 ------------
+2026-11-20 00:08:43,600 [MainThread  ] [INFO ]  ---------Test 137 ------------
+2026-11-20 00:08:52,941 [MainThread  ] [INFO ]  Clean ACC:              0.8651
+2026-11-20 00:08:52,941 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6733
+2026-11-20 00:08:52,941 [MainThread  ] [INFO ]  Backdoor ACC:           0.2900
+2026-11-20 00:08:52,941 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:08:52,941 [MainThread  ] [INFO ]  --------round 138 ------------
+2026-11-20 00:10:32,903 [MainThread  ] [INFO ]  ---------Test 138 ------------
+2026-11-20 00:10:42,327 [MainThread  ] [INFO ]  Clean ACC:              0.8632
+2026-11-20 00:10:42,328 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6729
+2026-11-20 00:10:42,328 [MainThread  ] [INFO ]  Backdoor ACC:           0.2938
+2026-11-20 00:10:42,328 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:10:42,328 [MainThread  ] [INFO ]  --------round 139 ------------
+2026-11-20 00:12:23,225 [MainThread  ] [INFO ]  ---------Test 139 ------------
+2026-11-20 00:12:32,484 [MainThread  ] [INFO ]  Clean ACC:              0.8674
+2026-11-20 00:12:32,484 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6610
+2026-11-20 00:12:32,485 [MainThread  ] [INFO ]  Backdoor ACC:           0.3040
+2026-11-20 00:12:32,485 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:12:32,485 [MainThread  ] [INFO ]  --------round 140 ------------
+2026-11-20 00:14:10,437 [MainThread  ] [INFO ]  ---------Test 140 ------------
+2026-11-20 00:14:20,179 [MainThread  ] [INFO ]  Clean ACC:              0.8663
+2026-11-20 00:14:20,179 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6910
+2026-11-20 00:14:20,179 [MainThread  ] [INFO ]  Backdoor ACC:           0.2758
+2026-11-20 00:14:20,179 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:14:20,179 [MainThread  ] [INFO ]  --------round 141 ------------
+2026-11-20 00:15:59,778 [MainThread  ] [INFO ]  ---------Test 141 ------------
+2026-11-20 00:16:09,355 [MainThread  ] [INFO ]  Clean ACC:              0.8666
+2026-11-20 00:16:09,356 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6698
+2026-11-20 00:16:09,356 [MainThread  ] [INFO ]  Backdoor ACC:           0.2949
+2026-11-20 00:16:09,356 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:16:09,356 [MainThread  ] [INFO ]  --------round 142 ------------
+2026-11-20 00:17:49,133 [MainThread  ] [INFO ]  ---------Test 142 ------------
+2026-11-20 00:17:58,308 [MainThread  ] [INFO ]  Clean ACC:              0.8675
+2026-11-20 00:17:58,308 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6758
+2026-11-20 00:17:58,308 [MainThread  ] [INFO ]  Backdoor ACC:           0.2902
+2026-11-20 00:17:58,308 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:17:58,308 [MainThread  ] [INFO ]  --------round 143 ------------
+2026-11-20 00:19:37,762 [MainThread  ] [INFO ]  ---------Test 143 ------------
+2026-11-20 00:19:47,271 [MainThread  ] [INFO ]  Clean ACC:              0.8656
+2026-11-20 00:19:47,271 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6740
+2026-11-20 00:19:47,271 [MainThread  ] [INFO ]  Backdoor ACC:           0.2922
+2026-11-20 00:19:47,271 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:19:47,271 [MainThread  ] [INFO ]  --------round 144 ------------
+2026-11-20 00:21:24,592 [MainThread  ] [INFO ]  ---------Test 144 ------------
+2026-11-20 00:21:33,878 [MainThread  ] [INFO ]  Clean ACC:              0.8648
+2026-11-20 00:21:33,878 [MainThread  ] [INFO ]  Attack Success Ratio:   0.7019
+2026-11-20 00:21:33,878 [MainThread  ] [INFO ]  Backdoor ACC:           0.2697
+2026-11-20 00:21:33,878 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:21:33,878 [MainThread  ] [INFO ]  --------round 145 ------------
+2026-11-20 00:23:11,673 [MainThread  ] [INFO ]  ---------Test 145 ------------
+2026-11-20 00:23:20,943 [MainThread  ] [INFO ]  Clean ACC:              0.8656
+2026-11-20 00:23:20,943 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6863
+2026-11-20 00:23:20,943 [MainThread  ] [INFO ]  Backdoor ACC:           0.2814
+2026-11-20 00:23:20,943 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:23:20,943 [MainThread  ] [INFO ]  --------round 146 ------------
+2026-11-20 00:24:57,711 [MainThread  ] [INFO ]  ---------Test 146 ------------
+2026-11-20 00:25:06,832 [MainThread  ] [INFO ]  Clean ACC:              0.8669
+2026-11-20 00:25:06,833 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6981
+2026-11-20 00:25:06,833 [MainThread  ] [INFO ]  Backdoor ACC:           0.2713
+2026-11-20 00:25:06,833 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:25:06,833 [MainThread  ] [INFO ]  --------round 147 ------------
+2026-11-20 00:26:43,964 [MainThread  ] [INFO ]  ---------Test 147 ------------
+2026-11-20 00:26:53,376 [MainThread  ] [INFO ]  Clean ACC:              0.8663
+2026-11-20 00:26:53,376 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6896
+2026-11-20 00:26:53,376 [MainThread  ] [INFO ]  Backdoor ACC:           0.2781
+2026-11-20 00:26:53,376 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:26:53,376 [MainThread  ] [INFO ]  --------round 148 ------------
+2026-11-20 00:28:30,274 [MainThread  ] [INFO ]  ---------Test 148 ------------
+2026-11-20 00:28:39,512 [MainThread  ] [INFO ]  Clean ACC:              0.8660
+2026-11-20 00:28:39,513 [MainThread  ] [INFO ]  Attack Success Ratio:   0.6921
+2026-11-20 00:28:39,513 [MainThread  ] [INFO ]  Backdoor ACC:           0.2777
+2026-11-20 00:28:39,513 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:28:39,513 [MainThread  ] [INFO ]  --------round 149 ------------
+2026-11-20 00:30:17,713 [MainThread  ] [INFO ]  ---------Test 149 ------------
+2026-11-20 00:30:26,926 [MainThread  ] [INFO ]  Clean ACC:              0.8676
+2026-11-20 00:30:26,926 [MainThread  ] [INFO ]  Attack Success Ratio:   0.7014
+2026-11-20 00:30:26,926 [MainThread  ] [INFO ]  Backdoor ACC:           0.2681
+2026-11-20 00:30:26,926 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:30:26,926 [MainThread  ] [INFO ]  --------round 150 ------------
+2026-11-20 00:32:05,956 [MainThread  ] [INFO ]  ---------Test 150 ------------
+2026-11-20 00:32:15,694 [MainThread  ] [INFO ]  Clean ACC:              0.8659
+2026-11-20 00:32:15,694 [MainThread  ] [INFO ]  Attack Success Ratio:   0.7036
+2026-11-20 00:32:15,694 [MainThread  ] [INFO ]  Backdoor ACC:           0.2681
+2026-11-20 00:32:15,694 [MainThread  ] [INFO ]  ------------------------------
+2026-11-20 00:32:15,694 [MainThread  ] [INFO ]  Best results:
+2026-11-20 00:32:15,694 [MainThread  ] [INFO ]  Clean ACC:              0.8676
+2026-11-20 00:32:15,694 [MainThread  ] [INFO ]  Attack Success Ratio:   0.7014
+2026-11-20 00:32:15,694 [MainThread  ] [INFO ]  Backdoor ACC:           0.2681
+2026-11-20 00:32:15,695 [MainThread  ] [INFO ]  Training has finished!
